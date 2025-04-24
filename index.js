@@ -5,6 +5,11 @@ function sendLocation() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const accu = position.coords.accuracy;
+
+         document.getElementById("latitude").textContent = latitude;
+        document.getElementById("longitude").textContent = longitude;
+        document.getElementById("accuracy").textContent = accu;
+
         console.log(`Latitude is ${latitude},\nLongitude is ${longitude}\nAccuracy is ${accu}`);
       },
       (error) => {
